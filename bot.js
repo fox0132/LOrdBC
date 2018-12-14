@@ -140,7 +140,7 @@ client.on("message", async message => {
 client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 40000 ;	
-    var setGame = ['This bot by a7med','!help|lord'];	
+    var setGame = ['This bot by a7med','*help|lord'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
