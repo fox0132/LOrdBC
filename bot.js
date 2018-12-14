@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "$";
+const prefix = "*";
 
 // ========================================== [ CONSTRUCTERS ] =========================================
 
@@ -140,17 +140,7 @@ client.on("message", async message => {
         });
     }
 });
-client.on("message", async message => {
-    if(message.content.startsWith(prefix + "invite")) {
-        let invite = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setAuthor(message.author.username, message.author.displayAvatarURL)
-            .setThumbnail(message.author.avatarURL)
-            .setTitle("**Click Here To Invite The Bot To Your Server :sparkling_heart:**")
-            .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
-            message.channel.sendEmbed(invite);
-    }
-});
+
 client.on("message", async message => {
     if(message.content.startsWith(prefix + "help")) {
         let help = new Discord.RichEmbed()
@@ -163,8 +153,6 @@ client.on("message", async message => {
             معلومات عن السيرفر : ${prefix}server
             برودكاست للأونلاين فقط : ${prefix}bco
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
-            رابط سيرفر الدعم الفني : https://discord.gg/YEXcDXt 
-            **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
 });
@@ -172,5 +160,24 @@ client.on("message", async message => {
 // DONE BY MOORZ .
 // CODES - COPYRIGHT
 
+client.on('ready', function(){
+    var ms = 10000 ;
+    var setGame = ['This bot by a7med','*help | LOrd $' ];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],https://www.twitch.tv/n3k4a);
+    }, ms);
 
-client.login("NTA5NDQ4NTg2MzEyOTQxNTg5.DuNNow.vJW3YAdlYJNbPTVTX3DqVOPCNqY");
+})
+خد
+
+
+client.login("NTIzMTA5ODg2NDkwNDQzNzg2.DvUvxA.WXLtYDvt6C0PCntwcYrhT-9ZoME");
